@@ -14,6 +14,7 @@ import com.piggywuwuwu.healingyukslayy.databinding.FragmentExploreBinding
 import org.json.JSONArray
 import org.json.JSONObject
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import com.android.volley.Request
 import com.squareup.picasso.Picasso
 
@@ -108,9 +109,11 @@ class ExploreFragment : Fragment() {
                 Context.RECEIVER_EXPORTED
             )
         } else {
-            requireActivity().registerReceiver(
+            ContextCompat.registerReceiver(
+                requireActivity(),
                 locationAddedReceiver,
-                IntentFilter("LOCATION_ADDED")
+                IntentFilter("LOCATION_ADDED"),
+                ContextCompat.RECEIVER_NOT_EXPORTED
             )
         }
         loadLocations()

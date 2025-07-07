@@ -42,7 +42,7 @@
                 android:id="@+id/tvFavoriteCategory"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/material_on_surface_disabled"
+                android:background="@color/material_on_surface_stroke"
                 android:paddingHorizontal="8dp"
                 android:paddingVertical="4dp"
                 android:text="Cafe"
